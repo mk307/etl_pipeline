@@ -20,8 +20,8 @@ from sklearn.preprocessing import StandardScaler
 df_gene_expr = pd.read_csv('gene_expression_data.csv')
 
 # Separating the gene identifiers (non-numeric) from the gene expression data (numeric)
-gene_ids = df_gene_expr.iloc[:, 0]  # Assuming first column has the gene identifiers
-gene_expr_data = df_gene_expr.iloc[:, 1:]  # Assuming the rest are numeric columns
+gene_ids = df_gene_expr.iloc[:, 0]  
+gene_expr_data = df_gene_expr.iloc[:, 1:]  
 
 # Checking if all remaining columns are numeric
 if not pd.api.types.is_numeric_dtype(gene_expr_data):
